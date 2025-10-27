@@ -31,7 +31,14 @@ linters:
           files:
             - $all
           allow:
+            - golang.org/x/exp/constraints$
             - github.com/cinode/go-common/
+            - errors$
+            - fmt$
+            - reflect$
+            - regexp$
+            - strings$
+            - testing$
     dupl:
       threshold: 100
     goconst:
