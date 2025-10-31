@@ -1,6 +1,8 @@
 {
     "go.coverOnSave": true,
     "cSpell.words": [
-        "cinode"
+        "cinode",
+        "cutl",
+        "picotestify"
     ]
 }

@@ -12,7 +12,13 @@ It has the following goals over the original testify one:
 
 The interface of picotestify is a subset of the original testify one and thus switching to the original testify library should be easily achievable through go.mod's rewrite option.
 
-
-## curl - Cinode Utilities
+## cutl - Cinode Utilities
 
 A set of small utilities that are shared across other modules.
+
+## blob - type-safe wrappers around various blob-related data
+
+- Name - identification of the specific blob instance
+- Type - blob type, associated with blob's name
+- Key - encryption keys for encrypting and decryption blob's data
+- AuthInfo - data allowing blob update after it's created (for dynamic blobs)

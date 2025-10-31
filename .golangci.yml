@@ -33,8 +33,15 @@ linters:
           allow:
             - golang.org/x/exp/constraints$
             - github.com/cinode/go-common/
+            - bytes$
+            - crypto/subtle$
+            - crypto/sha256$
+            - embed$
             - errors$
+            - encoding/hex$
+            - encoding/json$
             - fmt$
+            - math/big$
             - reflect$
             - regexp$
             - strings$
