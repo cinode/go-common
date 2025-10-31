@@ -11,3 +11,8 @@ It has the following goals over the original testify one:
 - Only bare-minimum set of functions - only the most necessary assertions are left, no printf-like messages etc.
 
 The interface of picotestify is a subset of the original testify one and thus switching to the original testify library should be easily achievable through go.mod's rewrite option.
+
+
+## curl - Cinode Utilities
+
+A set of small utilities that are shared across other modules.
