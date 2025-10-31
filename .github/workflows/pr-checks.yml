@@ -31,7 +31,15 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version: stable
+
       - name: Run tests
-        run: go test ./... -v
+        run: go test ./... -v -coverprofile=profile.cov
+      - uses: shogo82148/actions-goveralls@v1
+        with:
+          path-to-profile: profile.cov
+      - uses: codecov/codecov-action@v5
+        with:
+          files: profile.cov
+
       - name: Run go vet
         run: go vet ./...
