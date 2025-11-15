@@ -96,6 +96,11 @@ func TestAssert(t *testing.T) {
 			fail: func(t assert.TestingT) { assert.ErrorContains(t, errors.New("test error: check"), "error2") },
 		},
 		{
+			name: "ErrorContains - nil",
+			pass: func(t assert.TestingT) { assert.ErrorContains(t, errors.New("test error: check"), "error") },
+			fail: func(t assert.TestingT) { assert.ErrorContains(t, nil, "error") },
+		},
+		{
 			name: "Empty",
 			pass: func(t assert.TestingT) { assert.Empty(t, []int{}) },
 			fail: func(t assert.TestingT) { assert.Empty(t, []int{1}) },

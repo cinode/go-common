@@ -166,7 +166,11 @@ func ErrorContains(t TestingT, err error, contains string, msgAndArgs ...any) bo
 		return true
 	}
 
-	fail(t, msgAndArgs, "Error %q does not contain %q", err.Error(), contains)
+	if err == nil {
+		fail(t, msgAndArgs, "Expected error containing %q but got nil", contains)
+	} else {
+		fail(t, msgAndArgs, "Error %q does not contain %q", err.Error(), contains)
+	}
 
 	return false
 }
